@@ -77,12 +77,6 @@ export default function SignIn({ setName }) {
                 e.preventDefault();
               }
             }}
-            onCompositionStart={() => {
-              console.log("Japan");
-            }}
-            onCompositionEnd={() => {
-              console.log("Japan");
-            }}
           />
           <Button
             type="button"
