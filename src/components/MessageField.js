@@ -1,5 +1,6 @@
 import { TextField } from "@material-ui/core";
 import React from "react";
+import { pushMessage } from "../.firebase-config";
 
 const MessageField = ({ name, text, setText }) => {
   return (
@@ -11,9 +12,7 @@ const MessageField = ({ name, text, setText }) => {
       onKeyDown={(e) => {
         if (text === "") return;
         if (e.key === "Enter") {
-          const text = e.target.value;
-          setText(e.target.value);
-          console.log(text);
+          pushMessage({ name: "test user", text });
           setText("");
           e.preventDefault();
         }
